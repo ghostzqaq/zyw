@@ -1325,4 +1325,25 @@ body {
         width: 45px;
         height: 45px;
     }
+
+}
+/* 确保进度条填充色显示 */
+.chart-bar[data-percentage="80"] .bar-fill::after {
+    width: 80%;
+    background: linear-gradient(to right, #2e7d32, #4caf50);
+}
+
+.chart-bar[data-percentage="75"] .bar-fill::after {
+    width: 75%;
+    background: linear-gradient(to right, #2e7d32, #4caf50);
+}
+
+.chart-bar[data-percentage="90"] .bar-fill::after {
+    width: 90%;
+    background: linear-gradient(to right, #2e7d32, #4caf50);
+}
+
+.chart-bar[data-percentage="70"] .bar-fill::after {
+    width: 70%;
+    background: linear-gradient(to right, #2e7d32, #4caf50);
 }
