@@ -1347,3 +1347,17 @@ body {
     width: 70%;
     background: linear-gradient(to right, #2e7d32, #4caf50);
 }
+/* 修复技术网格布局 */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: stretch;
+}
+
+.tech-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
