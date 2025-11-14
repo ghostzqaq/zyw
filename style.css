@@ -1436,17 +1436,43 @@ body {
         max-width: 100%;
     }
 }
-/* 橙色渐变文字样式 - 修复版 */
-.hero-title .gradient-text {
-    background: linear-gradient(135deg, #FF5722, #FF9800, #FFC107) !important;
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    color: transparent !important;
+/* 霓虹灯艺术字效果 */
+.neon-text {
+    background: linear-gradient(135deg, #FF0080, #FF8C00, #40E0D0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: inline-block;
     font-weight: 800;
-    text-shadow: none;
+    text-shadow: 
+        0 0 5px #FF0080,
+        0 0 10px #FF0080,
+        0 0 15px #FF0080,
+        0 0 20px #FF8C00,
+        0 0 35px #FF8C00,
+        0 0 40px #FF8C00,
+        0 0 50px #40E0D0,
+        0 0 75px #40E0D0;
+    animation: neon-flicker 2s infinite alternate;
 }
+
+@keyframes neon-flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 
+            0 0 5px #FF0080,
+            0 0 10px #FF0080,
+            0 0 15px #FF0080,
+            0 0 20px #FF8C00,
+            0 0 35px #FF8C00,
+            0 0 40px #FF8C00,
+            0 0 50px #40E0D0,
+            0 0 75px #40E0D0;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
 /* 优点网格布局 */
 .pros-grid {
     display: grid;
