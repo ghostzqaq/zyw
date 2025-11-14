@@ -1435,9 +1435,8 @@ body {
     .tech-card {
         max-width: 100%;
     }
-} column;
 }
-/* 橙色渐变文字样式 */
+
 /* 颜色渐变文字样式 */
 .gradient-text {
     background: linear-gradient(135deg, #E65C00, #FF7700, #FF9900);
