@@ -1437,9 +1437,9 @@ body {
     }
 } column;
 }
-/* 修改 */
+/* 橙色渐变文字样式 */
 .gradient-text {
-    background: linear-gradient(135deg, #CC5500, #FF6600, #FF8800);
+    background: linear-gradient(135deg, #E65C00, #FF7700, #FF9900);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
