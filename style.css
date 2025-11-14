@@ -1436,14 +1436,15 @@ body {
         max-width: 100%;
     }
 }
-
-/* 颜色渐变文字样式 */
-.gradient-text {
-    background: linear-gradient(135deg, #E65C00, #FF7700, #FF9900);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* 橙色渐变文字样式 - 修复版 */
+.hero-title .gradient-text {
+    background: linear-gradient(135deg, #FF5722, #FF9800, #FFC107) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
     display: inline-block;
     font-weight: 800;
+    text-shadow: none;
 }
 
