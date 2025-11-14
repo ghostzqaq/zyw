@@ -1447,4 +1447,68 @@ body {
     font-weight: 800;
     text-shadow: none;
 }
+/* 优点网格布局 */
+.pros-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
 
+.pros-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.pros-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.pros-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-right: 20px;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.pros-card:hover .pros-icon {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.pros-content h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.pros-content p {
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .pros-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pros-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .pros-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
