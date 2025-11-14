@@ -1512,20 +1512,3 @@ body {
         margin-bottom: 15px;
     }
 }
-/* 霓虹灯动画关键帧 - 必须添加到CSS中 */
-@keyframes neon-flicker {
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
-        text-shadow: 
-            0 0 5px #FF0080,
-            0 0 10px #FF0080,
-            0 0 15px #FF0080,
-            0 0 20px #FF8C00,
-            0 0 35px #FF8C00,
-            0 0 40px #FF8C00,
-            0 0 50px #40E0D0,
-            0 0 75px #40E0D0;
-    }
-    20%, 24%, 55% {
-        text-shadow: none;
-    }
-}
