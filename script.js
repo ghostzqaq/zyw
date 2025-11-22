@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initBackToTop();
 });
 
-// 粒子背景初始化
+// 粒子背景初始
 function initParticles() {
     if (typeof particlesJS !== 'undefined') {
         particlesJS('particles-js', {
@@ -116,7 +116,7 @@ function initParticles() {
     }
 }
 
-// 导航菜单初始化
+// 导航菜单初始
 function initNavigation() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -134,7 +134,7 @@ function initNavigation() {
         navMenu.classList.remove('active');
     }));
     
-    // 导航栏滚动效果
+    // 导航栏滚动
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -144,7 +144,7 @@ function initNavigation() {
     });
 }
 
-// 滚动动画初始化
+// 滚动画初始
 function initScrollAnimations() {
     // 创建IntersectionObserver实例
     const observerOptions = {
@@ -155,7 +155,7 @@ function initScrollAnimations() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // 为元素添加动画类
+                // 元素添加动画类
                 if (entry.target.classList.contains('animate-card')) {
                     entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
                     entry.target.style.animationDelay = (Math.random() * 0.5) + 's';
@@ -171,13 +171,13 @@ function initScrollAnimations() {
                     }
                 }
                 
-                // 停止观察已动画的元素
+                // 停止look已动画元素
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
     
-    // 观察所有需要动画的元素
+    // look所有需要动画的元素
     document.querySelectorAll('.animate-card, .animate-slide-left, .animate-slide-right, .animate-stat').forEach(el => {
         observer.observe(el);
     });
@@ -212,7 +212,7 @@ function initScrollAnimations() {
 
 // 统计数字动画
 function initStatsAnimation() {
-    // 在滚动动画中已经处理
+    // 在滚动画中已经处理
 }
 
 // 数字递增动画
@@ -410,4 +410,6 @@ window.addEventListener('load', function() {
     if (heroButtons) {
         heroButtons.style.animation = 'fadeInUp 1s ease 0.6s forwards';
     }
+
 });
+// ghostzqaq防伪标志
