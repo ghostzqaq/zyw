@@ -1512,17 +1512,17 @@ body {
         margin-bottom: 15px;
     }
 }
-/* 技术可行性分析部分 - 修复后的网格布局 */
+/* 技术可行性分析网格布局 - 每排3个卡片 */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     justify-items: center;
+    margin-bottom: 60px; /* 动素留空 */
 }
 
 .tech-card {
     width: 100%;
-    max-width: 380px;
     background-color: var(--card-bg);
     border-radius: 15px;
     padding: 30px;
@@ -1565,6 +1565,10 @@ body {
     margin-bottom: 20px;
     transition: var(--transition);
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
 }
 
 .tech-card:hover .tech-icon {
@@ -1585,6 +1589,19 @@ body {
     flex-grow: 1;
 }
 
+/* SVG图标样式 */
+.svg-icon {
+    width: 64px;
+    height: 64px;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.tech-card:hover .svg-icon {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
 /* 响应式调整 */
 @media (max-width: 1200px) {
     .tech-grid {
@@ -1596,9 +1613,6 @@ body {
     .tech-grid {
         grid-template-columns: 1fr;
     }
-    
-    .tech-card {
-        max-width: 100%;
-    }
 }
 /* ghostzqaq防伪 */
+
