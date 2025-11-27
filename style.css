@@ -1614,5 +1614,233 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* 科技感动画容器 */
+.tech-animation-container {
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    background: linear-gradient(135deg, rgba(46, 125, 50, 0.05), rgba(33, 150, 243, 0.05));
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* 充电动画 */
+.charging-pulse-animation {
+    position: relative;
+    width: 120px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+}
+
+.charging-station-tech {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 150px;
+    z-index: 10;
+}
+
+.station-base-tech {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 15px;
+    background: linear-gradient(135deg, #2e7d32, #4caf50);
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.station-pole-tech {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 100px;
+    background: linear-gradient(to top, #2e7d32, #4caf50);
+    border-radius: 6px;
+}
+
+.station-head-tech {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 25px;
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-light {
+    width: 8px;
+    height: 8px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    animation: techLight 2s infinite alternate;
+}
+
+@keyframes techLight {
+    0% {
+        background-color: #4caf50;
+        box-shadow: 0 0 5px #4caf50;
+    }
+    100% {
+        background-color: #2196f3;
+        box-shadow: 0 0 15px #2196f3, 0 0 30px #2196f3;
+    }
+}
+
+/* 脉冲圆圈动画 */
+.pulse-circle {
+    position: absolute;
+    border: 2px solid #4caf50;
+    border-radius: 50%;
+    opacity: 0;
+    animation: pulse 3s infinite;
+}
+
+.pulse-1 {
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.pulse-2 {
+    width: 120px;
+    height: 120px;
+    animation-delay: 1s;
+}
+
+.pulse-3 {
+    width: 160px;
+    height: 160px;
+    animation-delay: 2s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* 数据流动画 */
+.data-flow-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.data-node {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #2196f3;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #2196f3;
+    animation: dataFlow 4s infinite linear;
+}
+
+.node-1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.node-2 {
+    top: 40%;
+    left: 30%;
+    animation-delay: 0.5s;
+}
+
+.node-3 {
+    top: 60%;
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.node-4 {
+    top: 40%;
+    left: 70%;
+    animation-delay: 1.5s;
+}
+
+.node-5 {
+    top: 20%;
+    left: 90%;
+    animation-delay: 2s;
+}
+
+@keyframes dataFlow {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+/* 确保最后一排两个卡片居中显示 */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+/* 当只有两个卡片在最后一排时，通过媒体查询调整 */
+@media (min-width: 1200px) {
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* 确保最后一排两个卡片居中 */
+    .tech-grid:has(.tech-card:nth-last-child(2):first-child) {
+        justify-content: center;
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 1199px) {
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-animation-container {
+        height: 150px;
+    }
+}
 /* ghostzqaq防伪 */
+
 
