@@ -1214,7 +1214,7 @@ body {
 .back-to-top {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 30px; /* 确保是 right 而不是 left */
     width: 50px;
     height: 50px;
     background-color: var(--primary-color);
@@ -1222,14 +1222,14 @@ body {
     border: none;
     border-radius: 50%;
     display: flex;
-    align-items: center;
+    align-items: center; /* 这行和后面的属性之前被注释掉了 */
     justify-content: center;
     font-size: 1.2rem;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
-    z-index: 999;
+    z-index: 1000; /* 增加到1000确保在粒子效果之上 */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -1858,6 +1858,7 @@ body > *:not(#particles-js) {
     z-index: 1;
 }
 /* ghostzqaq防伪 */
+
 
 
 
