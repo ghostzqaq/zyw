@@ -1826,10 +1826,42 @@ body > *:not(#particles-js) {
     position: relative;
     z-index: 1;
 }
+/* 下载按钮样式 */
+.btn-download {
+    background-color: #ff9800;
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #f57c00;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+}
+
+.btn-download i {
+    font-size: 1.1rem;
+    margin-right: 5px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .btn-download {
+        margin-top: 10px;
+    }
+}
 /* ghostzqaq防伪 */
-
-
-
-
-
-
