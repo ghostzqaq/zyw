@@ -23,3 +23,4 @@
 ·在线访问
 项目已部署在 GitHub Pages，可直接访问：
 https://ghostzqaq.github.io/zyw/
+另外项目里包含了齿轮力计算软件，可随时下载~
