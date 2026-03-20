@@ -1845,7 +1845,7 @@ body > *:not(#particles-js) {
 
 /* 下载按钮 */
 .nav-download-btn {
-    background-color: var(--primary-color);   
+    background-color: #ff9800;   
     color: #fff !important;
     padding: 8px 18px;
     border-radius: 50px;
